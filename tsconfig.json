@@ -1,0 +1,28 @@
+# Badr Jabali Portfolio
+
+Performance Marketing Specialist · Paid Media Buyer
+
+I turn ad spend into profit — not just clicks.
+
+**Live site**: Deploy to Vercel/Netlify
+
+## Stack
+- Vite + React 18 + TypeScript
+- Tailwind CSS
+- shadcn/ui + Radix
+- Lucide Icons
+
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+```bash
+npm run build
+```
+Upload `dist/` to any static host, or connect repo to Vercel for auto-deploy.
+
+## Contact
+badrjabali@gmail.com

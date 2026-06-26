@@ -1,0 +1,164 @@
+import { ArrowRight, Mail, Check } from 'lucide-react'
+import portrait from '/portrait.jpeg'
+import represent from '/represent.png'
+import chari from '/chari.png'
+import rokka from '/rokka.jpg'
+import nobodyschild from '/nobodyschild.jpg'
+import millie from '/millie.png'
+import zatino from '/zatino.jpg'
+
+const kpis = [
+  { label: 'Average ROAS Delivered', value: '3.4x' },
+  { label: 'Avg CPA Reduction', value: '-30%' },
+  { label: 'Avg CTR', value: '2.8%' },
+  { label: 'Avg CAC Reduction', value: '-25%' },
+]
+
+const brands = [
+  { name: 'Represent', country: 'UK Streetwear', result: '3.4x ROAS', logo: represent },
+  { name: 'Chari', country: 'Morocco B2B Platform', result: '+40% Sign-ups', logo: chari },
+  { name: 'Rokka & Rolla', country: 'USA Apparel', result: '80% GMV Growth', logo: rokka },
+  { name: "Nobody's Child", country: 'UK Fashion', result: '+28% DTC Revenue', logo: nobodyschild },
+  { name: 'Millie & Jones', country: 'UK Furniture', result: '3.1x ROAS', logo: millie },
+  { name: 'Zatino', country: 'Morocco Footwear', result: '+35% Sales', logo: zatino },
+]
+
+const skills = ['Meta Ads Manager', 'Google Ads', 'TikTok Ads', 'UTM Tracking', 'Pixel Setup', 'Google Analytics', 'Creative Strategy & Testing', 'Audience Segmentation', 'Budget Scaling', 'DTC E-commerce Acquisition']
+
+export default function App() {
+  return (
+    <div className="min-h-screen">
+      <header className="border-b sticky top-0 bg-white/80 backdrop-blur z-50">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="font-bold text-xl">Badr Jabali</div>
+          <nav className="hidden md:flex gap-6 text-sm">
+            <a href="#about">About</a>
+            <a href="#kpi">KPI</a>
+            <a href="#experience">Experience</a>
+            <a href="#cases">Case Studies</a>
+            <a href="#brands">Brands</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <a href="#contact" className="bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium">WORK WITH ME</a>
+        </div>
+      </header>
+
+      <section className="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 className="text-5xl font-bold leading-tight">Badr Jabali</h1>
+          <p className="text-xl text-slate-600 mt-2">Performance Marketing Specialist · Paid Media Buyer</p>
+          <p className="text-2xl font-semibold mt-6">I turn ad spend into profit — not just clicks.</p>
+          <div className="flex gap-8 mt-8">
+            <div><div className="text-3xl font-bold">3.4x</div><div className="text-sm text-slate-600">Average ROAS Delivered</div></div>
+            <div><div className="text-3xl font-bold">4 Years</div><div className="text-sm text-slate-600">Experience</div></div>
+            <div><div className="text-3xl font-bold">15+</div><div className="text-sm text-slate-600">Brands</div></div>
+          </div>
+          <a href="#contact" className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg mt-8 font-medium">WORK WITH ME <ArrowRight size={18} /></a>
+        </div>
+        <div><img src={portrait} alt="Badr Jabali" className="rounded-2xl w-full object-cover aspect-square" /></div>
+      </section>
+
+      <section id="about" className="bg-slate-50 py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">Executive Summary</h2>
+          <p className="text-lg text-slate-700 max-w-3xl">I'm a Media Buyer with 4 years of experience managing paid acquisition for DTC e-commerce brands. I've worked across Meta, Google, and TikTok, delivering consistent profitable ROAS for 15+ brands across Morocco, the UK, and the USA.</p>
+          <div className="mt-8 space-y-4">
+            <div className="flex gap-3"><ArrowRight className="mt-1 flex-shrink-0" size={20} /><p>I speak 3 languages (English, French, Arabic) — allowing me to manage campaigns across diverse markets.</p></div>
+            <div className="flex gap-3"><ArrowRight className="mt-1 flex-shrink-0" size={20} /><p>I build systems, not just campaigns — prospecting, retargeting, lookalike, and LTV optimization.</p></div>
+            <div className="flex gap-3"><ArrowRight className="mt-1 flex-shrink-0" size={20} /><p>I focus on profit, not just clicks or impressions.</p></div>
+          </div>
+          <p className="text-xl font-semibold mt-8">I don't just run ads. I build profit engines.</p>
+        </div>
+      </section>
+
+      <section id="kpi" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-10">Key Performance Indicators</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {kpis.map(k => (
+              <div key={k.label} className="border rounded-xl p-6">
+                <div className="text-3xl font-bold">{k.value}</div>
+                <div className="text-sm text-slate-600 mt-1">{k.label}</div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 text-sm">
+            <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> CPM Optimized</div>
+            <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> AOV Maintained</div>
+            <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> MER Profitable</div>
+            <div className="flex items-center gap-2"><Check size={16} className="text-green-600" /> LTV Increased</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" className="bg-slate-50 py-20">
+        <div className="max-w-6xl mx-auto px-4 space-y-16">
+          <h2 className="text-3xl font-bold">Case Studies</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold">Represent — UK Streetwear</h3>
+              <p className="text-slate-600 mt-1">£93M+ annual revenue · During my time at Mercodize</p>
+              <p className="mt-4 font-semibold">Challenge</p>
+              <p className="text-slate-700">Product drops generate 25x traffic spikes. Conversion rates were underperforming. ROAS was below target.</p>
+              <p className="mt-4 font-semibold">Results</p>
+              <p className="text-slate-700">ROAS: 2.1x → 3.4x (12 months) · CPA reduced by 30% · Budget: $20k → $50k profitably</p>
+            </div>
+            <img src={represent} alt="Represent" className="rounded-xl border" />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <img src={chari} alt="Chari" className="rounded-xl border md:order-first" />
+            <div>
+              <h3 className="text-2xl font-bold">Chari — Morocco B2B Platform</h3>
+              <p className="text-slate-600 mt-1">$100M valuation · FT & Harvard case study · *Through Mercodize</p>
+              <p className="mt-4 font-semibold">Challenge</p>
+              <p className="text-slate-700">Acquiring informal Moroccan retailers through digital channels — a traditionally offline audience.</p>
+              <p className="mt-4 font-semibold">Results</p>
+              <p className="text-slate-700">Merchant sign-ups: +40% · Cost-per-acquisition: -35%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="brands" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-10">Brand Portfolio</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {brands.map(b => (
+              <div key={b.name} className="border rounded-xl p-6 text-center">
+                <img src={b.logo} alt={b.name} className="h-12 mx-auto object-contain mb-4" />
+                <div className="font-semibold">{b.name}</div>
+                <div className="text-sm text-slate-600">{b.country}</div>
+                <div className="text-sm font-medium mt-2 text-green-700">{b.result}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">Core Skills</h2>
+          <div className="flex flex-wrap gap-3">
+            {skills.map(s => <span key={s} className="bg-white border px-4 py-2 rounded-full text-sm">{s}</span>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold">Get In Touch</h2>
+          <p className="text-slate-600 mt-2">Languages: English, French, Arabic</p>
+          <a href="mailto:badrjabali@gmail.com" className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg mt-6 font-medium">
+            <Mail size={18} /> badrjabali@gmail.com
+          </a>
+        </div>
+      </section>
+
+      <footer className="border-t py-8 text-center text-sm text-slate-500">
+        © 2026 Badr Jabali. I build profit engines.
+      </footer>
+    </div>
+  )
+}
